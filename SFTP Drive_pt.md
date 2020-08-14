@@ -1,6 +1,6 @@
 # Configuração de Armazenamento compartilhado por SSH/SFTP no Windows 10
 
-## Esse é um tutorial de configuração de armazenamento compartilhado via SSH/SFTP no windows.
+## Esse é um tutorial de configuração de armazenamento compartilhado via SSH/SFTP no Windows.
 
 ### Introdução
 A forma mais conhecida de configurar esse tipo de armazenamento está bem documentada, como no artigo abaixo:
@@ -10,17 +10,17 @@ Porém essa solução não funciona tão bem, ao menos não na minha máquina co
 
 >_NSoftware SFTP Drive_ **é gratuito exclusicamente para uso não-comercial**.
 
-### Step 1:
+### Passo 1:
 Download SFTP Drive ([link aqui](https://www.nsoftware.com/sftp/drive/)) no [site oficial da NSoftware](https://www.nsoftware.com/) e instale o _.exe_.
 
-### Step 2:
+### Passo 2:
 >_Para o próximo passo o servidor de armazenamento compartilhado precisa estar com o serviço de SSH/SFTP instalado e configurado com usuário e senha ou chave RSA pública válida._
 
 Após a instalação, é preciso acrescentar o novo servidor, como ilustrado abaixo:
 
 ![add storage server](sftpdrive_step2.1.PNG)
 
-Acrescente a identficação do servidor SSH/SFTP e suas configurações:
+Acrescente a identificação do servidor SSH/SFTP e suas configurações:
 
 ![server identification](sftpdrive_step2.2.PNG)
 
@@ -42,11 +42,11 @@ _Et voilà_
 
 ![available storage drive](sftpdrive_step2.6.PNG)
 
-Após condigurado é possível conectar com o drive de armazenamento a partir da interface do SFTP Drive. Apenas clique em **START**, conforme exibido na primeira imagem com o drive desejado selecionado na lista.
+Após configurado é possível conectar com o drive de armazenamento a partir da interface do SFTP Drive. Apenas clique em **START**, conforme exibido na primeira imagem com o drive desejado selecionado na lista.
 
 >Notas:
 >- A instalação vem com [esse manual](nsoftware.SFTPDrive.pdf) contendo essas e outras informações mais detalhadas.
->- Até o momento em que esse artigo foi escrito o SFTP Drive da NSoftware suporta a conexão com apenas um servidor de cada vez.
->- Uma vez configurado o armazenamento remoto ficará disponível automaticamente, mesmo após a máquina reiniciar.
+>- Até o momento em que esse artigo foi escrito, o SFTP Drive da NSoftware suporta a conexão com apenas um servidor de cada vez.
+>- Uma vez configurado, o armazenamento remoto ficará disponível automaticamente, mesmo após a máquina reiniciar.
 
-> Esse artigo será revisado por [Dona Cartolina](ela_não_tem_perfil_online) em 2020-08-13.
+> Esse artigo foi revisado por Carolina Brandão em 2020-08-13.
