@@ -15,7 +15,7 @@ But that solution doesn't work quite well, at least it didn't for my Windows 10 
 Download SFTP Drive ([link here](https://www.nsoftware.com/sftp/drive/)) at [NSoftware's official website](https://www.nsoftware.com/) and install it.
 
 ### Step 2:
->_For this step the shared storage server has ssh/sftp enabled with a known user and password or valid rsa public key._
+>_For this step the shared storage server must have ssh/sftp enabled with a known user and password or valid rsa public key._
 
 After the installation, you have to add a new server, as shown in the image below:
 
@@ -48,6 +48,6 @@ Once configured you can connect to the drive from the _\n software_ management G
 >Notes:
 >- The installation comes with [this manual](nsoftware.SFTPDrive.pdf) containing more in-depth instructions.
 >- By the time when this article was finished, NSoftware's SFTP Drive supported only one remote drive connection at a time.
->- Once configured, the remote drive will be automatically available even right after the system's boot.
+>- Once configured, the remote drive will be automatically available even after the system's fresh boot.
 
-> This article was reviewed by Heitor Brandão at 2020-08-12
+> This article was reviewed by [Heitor Brandão](https://m.facebook.com/heitorvinicius.guedesbrandao) at 2020-08-12
