@@ -8,6 +8,7 @@
 [English tutorial](https://github.com/synini/SFTP-Drive/blob/master/Fix%20partition%20ownership_en.md)
 
 ---
+---
 
 #### _Leia-me em português:_
 ## Configuração de Armazenamento compartilhado por SSH/SFTP no Windows 10
