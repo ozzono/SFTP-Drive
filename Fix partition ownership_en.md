@@ -55,4 +55,4 @@ It's now remotely accessible with read and write permissions, in this example, b
 Check here how to configure a [Remote SSH/SFTP Storage Drive access on Windows 10](https://medium.com/@huvirgilio/ssh-sftp-storage-drive-on-windows-10-1e16210a919a).
 
 #### Note:
->This tutorial is based on the this [answer](https://askubuntu.com/questions/11840/how-do-i-use-chmod-on-an-ntfs-or-fat32-partition/956072#956072) from [sudodus](https://askubuntu.com/users/55537/sudodus).
+>This tutorial is based on this [answer](https://askubuntu.com/questions/11840/how-do-i-use-chmod-on-an-ntfs-or-fat32-partition/956072#956072) from [sudodus](https://askubuntu.com/users/55537/sudodus).
