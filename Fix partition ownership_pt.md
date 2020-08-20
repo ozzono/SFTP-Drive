@@ -44,7 +44,7 @@ Utilize o número no  comando abaixo:
 > - `sudo mount -o rw,user,uid=1000,dmask=007,fmask=117 /dev/sda1 /data/part1` # sem permissão de execução
 > - `sudo mount -o rw,users,umask=000,exec /dev/sda1 /data.part1` # com permissão para todos os usuários - Conveniente, porém menos seguro
 
-_Nota: é possível executar comando similar utilizando a identificação do grupo de usuários `gid`.
+_Nota: é possível executar comando similar utilizando a identificação do grupo de usuários `gid`_.
 
 ### **Et voilà**
 ```
