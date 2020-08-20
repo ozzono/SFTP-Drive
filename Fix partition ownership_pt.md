@@ -2,6 +2,8 @@
 
 ## Esse é um breve tutorial de como modificar o proprietário, configuração de acesso e permissões a determinada partição.
 
+_Read this article in enligh [here](https://github.com/synini/SFTP-Drive/blob/master/Fix%20partition%20ownership_en.md)._
+
 Esse tutorial é pensado para quem utiliza um armazenamento numa máquina remota linux _(nesse exemplo, ubuntu, mas possívelmente se aplica a diversas outras distros)_ e gostaria de acessá-lo via SSHFS como dispositivo remoto de armazenamento.
 
 Por padrão, dispositivos de armazenamento são montados automaticamente e ficam disponíveis para todos os usuários quando em um desktop com GUI (graphical user interface), mas quando utilizando o armazenamento em um servidor e normalmente montando-o manualmente ao menos uma vez, é preciso configurar as permissões para outros usuários além do _root_.

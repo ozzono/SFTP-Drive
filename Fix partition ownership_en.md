@@ -2,6 +2,8 @@
 
 ## This is a swift tutorial on how to change the mounted partition point owner user, access and permissions.
 
+_Leia esse artigo em português [aqui](https://github.com/synini/SFTP-Drive/blob/master/Fix%20partition%20ownership_pt.md)._
+
 This tutorial is thought for those who use a storage in a remote linux machine _(in my case, ubuntu, but it will be useful on most linux distros)_ and would desire to access it through SSHFS as a remote storage drive.
 
 By default, the mounted partition point is locally accessible by all users while in a desktop machine with a GUI (graphical user interface), but when using a server-like machine and usually mounting the storage manually at least once, it will be needed to configure the permissions to other users other than _root_.
