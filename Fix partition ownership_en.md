@@ -4,12 +4,12 @@
 
 _Leia esse artigo em português [aqui](https://github.com/synini/SFTP-Drive/blob/master/Fix%20partition%20ownership_pt.md)._
 
-This is a tutorial meant for those who use a shared storage in a remote SSH enabled Linux machine _(in my case, Ubuntu, but it will be useful on most Linux distros)_ configured as a remote storage drive.
+This tutorial is meant for those who use a shared storage in a remote SSH-enabled Linux machine. It was tested for Ubuntu, but it will be useful on most Linux distros.
 
-By default, the mounted partition point is locally accessible by all users while in a GUI (graphical user interface) enabled desktop machine. However, when using a server-like machine and usually mounting the storage manually at least once, it will be needed to configure the permissions to other users other than _root_.
+By default, when in a desktop with a GUI (graphical user interface), the mounted partition point is locally accessible by all users. However, when using a server-like machine and mounting the storage manually at least once, it will be needed to configure the permissions to other users besides _root_.
 
-Before executing the commands I suggest in this tutorial, I tried to change the folders owner with the command `sudo chown -R <user> <folder>`, mode with `sudo chmod a+rwx <folder>`. These had no result, so I kept searching and tried to change the folders attribute with `sudo chattr -i <folder>`, which returned the following error:
->chattr: Inappropriate ioctl for device while reading flags on \<folder\>.
+Before executing the commands I suggest in this tutorial, I tried to change the folder's owner with the command `sudo chown -R <user> <folder>`, mode with `sudo chmod a+rwx <folder>`. These had no result, so I kept searching and tried to change the folder's attribute with `sudo chattr -i <folder>`, which returned the following error:
+>chattr: Inappropriate ioctl for device while reading flags on \<folder>.
 
 That said, lets start the tutorial.
 
@@ -56,5 +56,6 @@ It's now remotely accessible with read and write permissions, in this example by
 
 Check here how to configure a [Remote SSH/SFTP Storage Drive access on Windows 10](https://medium.com/@huvirgilio/ssh-sftp-storage-drive-on-windows-10-1e16210a919a).
 
-#### Note:
->This tutorial is based on [this](https://askubuntu.com/questions/11840/how-do-i-use-chmod-on-an-ntfs-or-fat32-partition/956072#956072) answer from [Sudodus](https://askubuntu.com/users/55537/sudodus).
+>#### Notes:
+> - This tutorial is based on [this](https://askubuntu.com/questions/11840/how-do-i-use-chmod-on-an-ntfs-or-fat32-partition/956072#956072) answer from [Sudodus](https://askubuntu.com/users/55537/sudodus).
+> - It was patiently reviewed by [Heitor Brandão](https://m.facebook.com/heitorvinicius.guedesbrandao) at 2020-08-25
