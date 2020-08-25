@@ -4,11 +4,11 @@
 
 _Leia esse artigo em português [aqui](https://github.com/synini/SFTP-Drive/blob/master/Fix%20partition%20ownership_pt.md)._
 
-This tutorial is thought for those who use a storage in a remote linux machine _(in my case, ubuntu, but it will be useful on most linux distros)_ and would desire to access it through SSHFS as a remote storage drive.
+This is a tutorial meant for those who use a shared storage in a remote SSH enabled Linux machine _(in my case, Ubuntu, but it will be useful on most Linux distros)_ configured as a remote storage drive.
 
-By default, the mounted partition point is locally accessible by all users while in a desktop machine with a GUI (graphical user interface), but when using a server-like machine and usually mounting the storage manually at least once, it will be needed to configure the permissions to other users other than _root_.
+By default, the mounted partition point is locally accessible by all users while in a GUI (graphical user interface) enabled desktop machine. However, when using a server-like machine and usually mounting the storage manually at least once, it will be needed to configure the permissions to other users other than _root_.
 
-First of all, my mounted point changed it's permission without my knowledge which forced me to debug it and I started trying to change the folder owner with the command `sudo chown -R <user> <folder>`, mod with `sudo chmod a+rwx <folder>`, these returned no error but failed to change anything, so I kept searching and tried to change the folder attribute with `sudo chattr -i <folder>` which returned the following error:
+Before executing the commands I suggest in this tutorial, I tried to change the folders owner with the command `sudo chown -R <user> <folder>`, mode with `sudo chmod a+rwx <folder>`. These had no result, so I kept searching and tried to change the folders attribute with `sudo chattr -i <folder>`, which returned the following error:
 >chattr: Inappropriate ioctl for device while reading flags on \<folder\>.
 
 That said, lets start the tutorial.
@@ -24,9 +24,9 @@ sda                                      2.7T
 ├─sda1 /data/part1               part1   1.2T vfat     5633-529C
 └─sda2 /data/part2               part2   1.2T vfat     9792-26A7
 ```
-It is also possible to use the simpler command `lsblk -f` which returns a similar output. 
+It is also possible to use the simpler command `lsblk -f` which has a similar output. 
 
-To unmount the storage, using the example, run the command `sudo unmount /data/part1` or `sudo unmount /dev/sda1`
+To unmount the storage using the example, run the command `sudo unmount /data/part1` or `sudo unmount /dev/sda1`
 
 ### Step 2
 Create the mountpoint folder:
@@ -52,9 +52,9 @@ $ls -l data/
 total 512
 drwxrwx--- 4 home root 262144 Dec 31  1969 part1
 ```
-It's now remotely accessible with read and write permissions, in this example, by the `home` user.
+It's now remotely accessible with read and write permissions, in this example by the `home` user.
 
 Check here how to configure a [Remote SSH/SFTP Storage Drive access on Windows 10](https://medium.com/@huvirgilio/ssh-sftp-storage-drive-on-windows-10-1e16210a919a).
 
 #### Note:
->This tutorial is based on this [answer](https://askubuntu.com/questions/11840/how-do-i-use-chmod-on-an-ntfs-or-fat32-partition/956072#956072) from [sudodus](https://askubuntu.com/users/55537/sudodus).
+>This tutorial is based on [this](https://askubuntu.com/questions/11840/how-do-i-use-chmod-on-an-ntfs-or-fat32-partition/956072#956072) answer from [Sudodus](https://askubuntu.com/users/55537/sudodus).
